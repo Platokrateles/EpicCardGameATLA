@@ -1,0 +1,228 @@
+@font-face {
+  font-family: PseudoAvatarFont;
+  src: url(Fonts/nihat.ttf);
+}
+
+:root
+{
+    --water: rgb(10, 36, 123);
+    --fire: rgb(141, 1, 2);
+    --air: rgb(57, 148, 175);
+    --earth: rgb(19, 93, 4);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    font-family: PseudoAvatarFont;
+  }
+  
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    background: url("Videos&Animations/backgroundZukoFinalSecondResize.gif");
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mainContainer
+  {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menuLeftPanel
+  {
+    position: relative;
+    width: 403px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    border: 0px red solid;
+    left: -490px;
+    transition: 0.8s;
+  }
+  .menuLeftPanel:hover
+  {
+    left: -150px;
+  }
+
+  img
+  {
+    position: relative;
+    height: 639px;
+    width: auto;
+    border: 0px blue solid;
+    left: 15%;
+  }
+
+  .logoATLA
+  {
+    position: relative;
+    width: 300px;
+    height: auto;
+    left: 0;
+    border: 0px;
+  }
+
+  .menu
+  {
+    display: none;
+    width: 1366px;
+    border: 0px orchid solid;
+    position: fixed;
+  }
+
+  .menuBackground
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 807px;
+  height: 645px;
+  margin-top: 0px;
+  background-image: url("Graphics/papyrusMenu.png");
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+button, .animated
+{
+  position: relative;
+  left: 120px;
+  top: 175px;
+}
+
+button
+{
+  font-size: 40px;
+  padding-bottom: 50px;
+  background: none;
+  border: 0px;
+  transition: 0.5s;
+}
+
+button:nth-of-type(2)
+{
+  padding-bottom: 20px;
+  /*border: 1px red solid;*/
+}
+
+.animated
+  {
+    bottom: 40px;
+    width: 381px;
+    height: 306px;
+    border: 0px;
+    /*border: 1px cornflowerblue solid;*/
+  }
+
+button:hover
+{
+  font-size: 54px;
+  cursor: pointer;
+  letter-spacing: 0.5em;
+}
+
+  .timer
+  {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0px black solid;
+  }
+
+  p
+  {
+    font-size: 120px;
+  }
+
+  .cardContainer
+  {
+    width: 70vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border: 0px black solid;
+  }
+    
+  .cardRow
+  {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 910px;
+    height: 136px;
+    border: 0px black solid;
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .externCard
+  {
+    width: 95px;
+    height: 132px;
+    perspective: 1000px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .card.is-flipped {
+    transform: rotateY(180deg) rotateZ(-180deg);
+  }
+  
+  
+  .cardSide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 10%;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardSide:hover
+  {
+    cursor: pointer;
+  }
+
+  .reverse
+  {
+    background-image: url(Graphics/reverseCard2.png);
+    display: flex;
+  }
+  
+  .obverse
+  {
+    transform: rotateY(-180deg) rotateZ(180deg);
+  }
+
+.firstCard
+{
+    margin-left: 0px;
+}
+
+.lastCard
+{
+    margin-right: 0px;
+}
